@@ -169,6 +169,89 @@ span{
     box-shadow: 0 0 25px var(--main-color);
     background-color: var(--main-color);
 }
+[data-title]:hover:after { 
+    opacity: 1; 
+    transition: all 0.1s ease 0.6s; 
+    visibility: visible; 
+} 
+[data-title]:after { 
+    content: attr(data-title); 
+    position: absolute; 
+    margin-top: 120px;
+    margin-left: 120px;
+    padding: 4px; 
+    color: #222; 
+    border-radius: 5px;   
+    box-shadow: 0px 0px 15px white; 
+    font-size: 15px;  
+    background-image: -webkit-linear-gradient( 
+        top, #04fffb, #04fffb);  
+                          
+    background-image: -moz-linear-gradient( 
+        top, #04fffb, #04fffb);   
+                          
+    background-image: -ms-linear-gradient( 
+        top, #04fffb, #04fffb);  
+                          
+    background-image: -o-linear-gradient( 
+        top, #04fffb, #04fffb); 
+                          
+    visibility: hidden; 
+} 
+.achievements{
+    background-color: var(--bg-color);
+    color: white;
+}
+.achievements h2{
+    margin-bottom: 5rem;
+    color: white;
+}
+.achieve-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.achieve-box{
+    background-color: var(--main-color);
+    color: black;
+    height: 250px;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.achieve-box:hover{
+    background: white;
+    color: var(--main-color);
+    transform: scale(1.03);
+}
+.achievements .click{
+    margin-bottom: 40px;
+}
+.achieve-box .achieve-info{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    flex-direction: column;
+    /* text-align: left; */
+    max-height: 200px;
+    justify-content: center;
+    align-items: center;
+    padding: 5em;
+}
+.achieve-info h4{
+    margin-top: 40px;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.achieve-info p{
+    color: black;
+    font-size: 1.6rem;
+    font-weight: 400;
+    max-height: 100px;
+    margin: auto;
+}
 .btn{
     display: inline-block;
     padding: 1rem 2.8rem;
@@ -316,7 +399,7 @@ span{
     width: 50px;
 }
 .click{
-    margin-top: 20px;
+    margin-top: 35px;
     display: inline-block;
     padding: 1rem 2.8rem;
     background: black;
@@ -350,7 +433,7 @@ span{
 .project-box{
     background-color: var(--main-color);
     color: black;
-    height: 250px;
+    height: 290px;
     border-radius: 3rem;
     cursor: pointer;
     transition: 0.3s ease-in-out;
@@ -365,8 +448,8 @@ span{
 }
 .project-box .project-info{
     display: flex;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    /* margin-bottom: 10px; */
     flex-direction: column;
     /* text-align: left; */
     max-height: 200px;
@@ -386,6 +469,7 @@ span{
     font-weight: 400;
     max-height: 100px;
     margin: auto;
+    line-height: 22px;
 }
 .contact{
     background-color: var(--second-bg-color);
